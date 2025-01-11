@@ -1,3 +1,3 @@
-# Akeyless Instruqt Users Training Accoutn Terraform
+# Akeyless Instruqt Users Training Account Terraform
 
-This is a Terraform project that creates training credentials and roles for Instruqt learners.
+This is a Terraform project that creates training account credentials and roles for Instruqt learners.
