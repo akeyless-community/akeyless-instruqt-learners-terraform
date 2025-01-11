@@ -40,9 +40,6 @@ resource "akeyless_auth_method_universal_identity" "learner_uid" {
 }
 
 resource "akeyless_role" "role" {
-  depends_on = [
-    akeyless_auth_method_universal_identity.learner_uid
-  ]
   name                = format("/instruqt-users-uid-roles/%s/uid-%s-role", var.instruqt_user_id, var.instruqt_user_id)
   description         = format("Role for user %s", var.instruqt_user_id)
   audit_access        = "own"
@@ -85,7 +82,6 @@ resource "akeyless_role" "role" {
 
 resource "akeyless_role" "role_viewer" {
   depends_on = [
-    akeyless_auth_method_universal_identity.learner_uid,
     akeyless_role.role
   ]
   name        = format("/instruqt-users-uid-roles/%s/role-viewer-%s-role", var.instruqt_user_id, var.instruqt_user_id)
