@@ -115,3 +115,7 @@ resource "akeyless_associate_role_auth_method" "role_viewer_role" {
 output "learner_uid" {
   value = akeyless_auth_method_universal_identity.learner_uid.name
 }
+
+output "uid_access_id" {
+  value = akeyless_auth_method_universal_identity.learner_uid.access_id
+}
