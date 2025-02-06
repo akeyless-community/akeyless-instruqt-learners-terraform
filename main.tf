@@ -6,12 +6,12 @@ terraform {
     }
   }
 
-  cloud {
-    organization = "cs-akl"
-    workspaces {
-      name = "instruqt-users-training-account"
-    }
-  }
+#   cloud {
+#     organization = "cs-akl"
+#     workspaces {
+#       name = "instruqt-users-training-account"
+#     }
+#   }
 }
 
 provider "akeyless" {
