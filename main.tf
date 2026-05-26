@@ -46,7 +46,7 @@ resource "akeyless_role" "role" {
   audit_access        = "own"
   analytics_access    = "own"
   event_center_access = "own"
-  gw_analytics_access = "own"
+  gw_analytics_access = "scoped"
   sra_reports_access  = "own"
 
   rules {
@@ -87,6 +87,7 @@ resource "akeyless_role" "role_viewer" {
   ]
   name        = format("/instruqt-users-uid-roles/%s/role-viewer-%s-role", var.instruqt_user_id, var.instruqt_user_id)
   description = format("Role Viewer for user %s", var.instruqt_user_id)
+  gw_analytics_access = "scoped"
 
   rules {
     capability = ["read", "list"]
